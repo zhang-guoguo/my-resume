@@ -1,0 +1,7 @@
+.skill-category {
+    font-weight: 600;
+    color: #003366;
+}
+.skill-box:nth-child(2) {
+    margin-top: 15px;
+}

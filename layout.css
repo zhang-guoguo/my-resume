@@ -1,0 +1,49 @@
+body {
+  font-size: 13px;
+  line-height: 20px;
+  color: #333; /* 文字颜色 */
+}
+
+.option {
+  padding-top: 15px;
+}
+
+.p-detail {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px ;
+  border-radius: 15px;
+}
+
+ol {
+  margin: 0;
+  padding-left:25px;
+}
+.default-title-wrapper span {
+  position:relative;
+  width:60px;
+  height:1;
+  display:inline-block;
+  padding:0 5px 0 15px;
+  background: #003366;
+  color:white;
+}
+.default-title-wrapper span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 70px;
+  width: 20px;
+  height: 25px;
+  background: inherit;
+  transform: skew(20deg);
+}
+
+.menu-content {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.menu-content span {
+  font-weight: 600;
+  color: #003366; /* 深蓝色 */
+}
+

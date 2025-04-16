@@ -1,0 +1,64 @@
+.default-title-wrapper {
+  border-bottom: 1px solid #003366; /* 深蓝色 */
+  margin-bottom: 8px;
+}
+
+.default-title-wrapper .title {
+  font-weight: 600;
+  line-height: 25px; 
+}
+
+.work {
+  padding-top: 5px;
+}
+
+.project {
+  padding-top: 15px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.project-0 {
+  margin-top: 0;
+  padding-top: 5px;
+}
+
+.project-0 .qrcode{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.project-0 .qrcode span{
+  font-weight: 600;
+  color: #003366;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.project-0 .qrcode img{
+  display: block;
+  width: 65px;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  color: #003366; /* 深蓝色 */
+  padding-right: 10px;
+}
+
+.menu-title a {
+  color: rgba(100, 0, 255, 1);
+  /* text-decoration: none; */
+}
+
+/* 公司名和大学名 */
+.menu-title .left span {
+  font-weight: 600;
+}
+.menu-content ul {
+  margin: 0;
+  padding: 0 16px;
+}
