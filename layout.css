@@ -1,3 +1,12 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 body {
   font-size: 13px;
   line-height: 20px;
@@ -47,6 +56,6 @@ ol {
   color: #003366; /* 深蓝色 */
 }
 
-.works-content ,.education-content {
+.works-content ,.education-content, .self-discrible-content{
   padding:0 15px;
 }
