@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head>  
+  <title>张果-前端开发-X年工作经验-简历</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -383,11 +384,17 @@
 </body>
 
 <script>
+  const years = new Date().getFullYear() - 2020
+
+  // 简历名称
+  const title = document.getElementsByTagName('title')[0]
+  title.textContent = `张果-前端开发-${years}年工作经验-简历`
+
   // 工作年限
   const experience = document.getElementById('work-experience')
-  const years = new Date().getFullYear() - 2020
   // const month = new Date().getMonth() +  1 > 6 ? 1 : 0.5
   experience.textContent = `${years} 年经验`
+
   // 最新工作日期
   const work = document.getElementsByClassName('work-1')[0]
   const right = work.getElementsByClassName('right')[0]
