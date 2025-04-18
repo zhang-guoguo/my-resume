@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="works.css">
+  <link rel="stylesheet" href="project.css">
   <link rel="stylesheet" href="userInfo.css">
   <link rel="stylesheet" href="skill.css">
   <style>
@@ -18,29 +18,32 @@
 <body>
   <!-- 个人信息 -->
   <div class="user-info">
-    <div class="user-name">张果</div>
-    <div class="profile-row">
-      <div class="profile-item">
-        <img src="img/phone.png" alt="" srcset="">
-        <span>15902312243</span>
+    <img src="./img/photo.png" alt="" srcset="">
+    <section>
+      <h4 class="user-name">张果</h4>
+      <div class="profile-row">
+        <div class="profile-item">
+          <img src="img/phone.png" alt="" srcset="">
+          <span>15902312243</span>
+        </div>
+        <div class="profile-item">
+          <img src="img/mail.png" alt="" srcset="">
+          <span>zhangguo_fontend@foxmail.com </span>
+        </div>
+        <div class="profile-item">
+          <img src="img/location.png" alt="" srcset="">
+          <span>西安 </span>
+        </div>
       </div>
-      <div class="profile-item">
-        <img src="img/mail.png" alt="" srcset="">
-        <span>zhangguo_fontend@foxmail.com </span>
-      </div>
-      <div class="profile-item">
-        <img src="img/location.png" alt="" srcset="">
-        <span>西安 </span>
-      </div>
-    </div>
-    <div class="profile-row">
-      <div class="profile-item">
-        <img src="img/people.png" alt="" srcset="">
-        <span id="work-experience">四年经验 </span>
-      </div>
-      <span>在职 </span>
-      <span>前端开发 </span>
-    </div>
+      <div class="profile-row">
+        <div class="profile-item">
+          <img src="img/people.png" alt="" srcset="">
+          <span id="work-experience">四年经验 </span>
+        </div>
+        <div class="profile-item"><span>在职</span> </div>
+        <div class="profile-item"><span>前端开发</span> </div>
+      </div>  
+    </section>
   </div>
   <!-- 工作经历 -->
   <div class="works option">
@@ -154,7 +157,7 @@
         <img src="./img/qrcode_h5.png" alt="" srcset="">
       </div>
       <div class="menu-content">
-        <div style="width: 85%;"><span><span>项目描述：</span></span>方便小微店铺进行小额高频收款，支持多种支付方式。并提供后续对账，查账，退款等一系列服务，满足线上线下多种收银需求。目前商户数30.76万，日活跃商户3万</div>
+        <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>方便小微店铺进行小额高频收款，支持多种支付方式。并提供后续对账，查账，退款等一系列服务，满足线上线下多种收银需求。目前商户数30.76万，日活跃商户3万</div>
         <!-- 央视网曾于2022.12.17报道 -->
         <div><span>技术栈：</span>vue3.0 + typescript + pinia + less + Vite5 + husky + git submodule</div>
         <!-- 这里可以聊 less 与 sass 的异同，说明为何选型要选 less ,比对商家端是 sass -->

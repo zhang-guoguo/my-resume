@@ -1,32 +1,76 @@
-body{
-  font-size: 13px;
-  line-height: 20px;
-}
-
 .user-info{
-  text-align: center;
+  display: flex;
+  align-items: center;
   /* background-color: #e6f0ff; 浅蓝色背景 */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.user-info section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* 小屏幕 */
+@media only screen and (max-width: 780px) {
+  .user-info {
+    flex-direction: column;
+  }
+  .user-info  section{
+    align-items: center;
+  }
+  .user-info .profile-row:not(:last-child){
+    flex-direction: column;
+  }
+}
+
+/* 大屏幕 */
+@media only screen and (min-width: 780px) {
+  .user-info section {
+    justify-content: center;
+  }
+}
+body{
+  font-size: 13px;
+  line-height: 20px;
+}
+
+
+
+.user-info img{
+  border-radius: 100%;
+  /* 右边加起来的再加点 */
+  height: 98px;
+  aspect-ratio: 0.8;
+}
+.user-info section{
+  padding-left: 15px;
+}
+
+
+
 .profile-row {
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
+.profile-row:not(:last-child) {
+  margin-bottom: 10px;
+}
 .profile-row img{
-  height: 20px;
+  height: 25px;
+  width: 22px;
 }
 
 .profile-item {
   display: flex;
-  padding-left: 15px;
   justify-content: center;
   align-items: center;
+}
+.profile-item:not(:first-child) {
+  padding-left: 15px;
 }
 
 .user-info span{
@@ -37,7 +81,8 @@ body{
 
 .user-name {
   font-size: 18px;
+  line-height: 1;
   font-weight: bold;
   color: #003366; /* 深蓝色 */
-  margin-bottom: 10px;
+  margin:10px 0 10px 0;
 }
