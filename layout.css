@@ -47,3 +47,6 @@ ol {
   color: #003366; /* 深蓝色 */
 }
 
+.works-content ,.education-content {
+  padding:0 15px;
+}
