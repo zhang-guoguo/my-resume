@@ -17,11 +17,6 @@ body {
   padding-top: 15px;
 }
 
-.p-detail {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 15px ;
-  border-radius: 15px;
-}
 
 ol {
   margin: 0;
@@ -61,4 +56,9 @@ ol {
 }
 .skill-content, .project-content {
   padding:0 5px;
+}
+.p-detail {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px ;
+  border-radius: 15px;
 }
