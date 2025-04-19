@@ -118,7 +118,7 @@
           <!-- <li> 数据通信：RESTful API, GraphQL, gRPC</li> -->
           <!-- 性能优化 -->
           <!-- <li>CDN, 缓存策略, 延迟优化</li> -->
-          <li>熟悉 HTTP、TCP、IP 网络协议，掌握常见网络问题排查工具的使用</li>
+          <li>熟悉 HTTPS、TCP、IP 网络协议，掌握常见网络问题排查工具的使用</li>
           <!-- Whistle、Wireshark  -->
           <!-- 熟悉网络编程，利用 socket 实现 web server -->
           <!--<li>基于 tcp/ip 协议的 restful(http/https), websocket(101 更换协议，全双工通行)，mqtt(轻量级，极少代码，少量带宽，实时可靠)</li>-->
@@ -133,7 +133,7 @@
            场景：通过 SSH 启动 Java 应用时，限制 SSM 对资源的访问（如文件读写、网络连接）
             -->
                      <!-- 工具 -->
-          <li>熟练掌握 Git 高级命令, 进行主包子包管理、版本控制, 熟练掌握 Jenkins 实现 CI/CD 流程的自动化</li>
+          <li>熟练掌握 Git 高级命令进行主包子包管理、版本控制, 熟练掌握 Jenkins 实现 CI/CD 流程的自动化</li>
         </ul>  
       </div>
       <div class="skill-box p-detail">
@@ -175,8 +175,9 @@
             <div><span><span>职责描述：</span></span></div>
             <ul>
               <!-- 面试再解释，采用 vue2.7 作为项目开发的原因为，即可以享受到 vue3 的语法结构，又可以兼容更低版本浏览器 -->
-              <li>使用 TypeScript 对 Axios 整个二次封装 （全局错误拦截、常用请求封装...）</li>
-              <li>抽离公共逻辑由 Pinia 进行状态管理, 优化代码逻辑，封装业务模块</li>
+              <li>使用 Vue 3 和 Pinia 构建高性能 H5 页面，确保在多浏览器环境下的兼容性</li>
+              <li>集成微信和支付宝的 JS-SDK，实现分享、支付等原生功能，提升用户体验</li>
+              <li>进行性能优化，包括代码分割、懒加载和资源压缩，确保页面快速加载。首页引入骨架屏，​​提升感知性能</li>
               <li>集成 Eslint、Stylelint 进行代码检查，使用 commitizen 统一提交信息，配置 husky 和 lint-staged 触发提交前代码检查</li>
               <!-- lint-stage只是钩子管理器，本身并不直接执行代码检查**，而是通过调用 ESLint、Stylelint、Prettier 等工具来完成代码检查、格式化等任务
               -->
@@ -227,7 +228,7 @@
           <div>
             <div><span><span>职责描述：</span></span></div>
             <ul>
-              <li>负责首页改版的需求，首页引导页的实现，项目埋点，商户白名单，控制版本灰度升级等</li>
+              <li>设计并实现前端包的动态升级机制，通过壳子管理前端资源的更新和版本控制。并引入商户白名单，指定对象进行版本升级</li>
               <li>公共组件开发和维护，提取相似逻辑，形成模块化功能文件</li>
               <li>针对项目打包体积过大，主要是图片存放地方进行了优化。包体积缩小 25%</li>
               <!-- 1. vue-cli 对 assets 文件夹下的文件，利用file-loader 有优化。小图会打包成base64,
@@ -238,7 +239,7 @@
               <!-- 冻结数据或者不在data中声明
                自定义事件，组件销毁时要清除，避免内存泄露 -->
               <li>扩展依赖包 uni-app-fox 网络请求部分，个性化依赖包功能</li>
-              <li>通过壳子注入 jsbridge 文件，实现调取通讯录，打开照相机，语音播报，证件信息识别等原生功能</li>
+              <li>壳子通过​​ WebView 组件注入 JavaScript Bridge，提供页面调取通讯录，打开照相机，语音播报，证件信息识别等设备原生功能</li>
               <!-- 可以结合下面 URL Scheme 聊 h5 与原生的通信 
                JSBridge 的原理通常并不依赖传统网络协议（如 HTTP、WebSocket 等）
                而是基于浏览器或 WebView 提供的接口和机制来实现
@@ -250,7 +251,7 @@
               <!-- 引申到加解密，以及网络安全 -->
               <!-- 面向对象编程，以及常见请求库的功能 -->
               <!-- 最好能说说 uniapp 和 vue 的关系，聊聊源码 -->
-              <li>移动端调试方法的预研和组内分享, 例如移动端抓包和页面调试工具</li>
+              <li>预研并在组内分享移动端调试方法和抓包工具, 提高整组的工作效率</li>
               <!-- 扩展说最开始只能去后端那边查日志，后来找到合适的方法，前端可以自主进行 -->
             </ul>
           </div>
@@ -273,6 +274,7 @@
             <div><span><span>职责描述：</span></span></div>
             <ul>
               <!-- pnpm 多个项目共享核心依赖 -->
+               <li>使用 UniApp 实现一套代码同时编译为微信和支付宝小程序，减少开发和维护成本</li>
                <li>配合三方具体应用场景，提供相应支付能力，并在微信官方风控收紧时，及时提供新方案</li>
                <li>配置微信后台订阅信息模板，并开发联调微信消息订阅模块</li>
               <li>负责小程序灰度发布体系的搭建，确保新功能安全稳定上线</li>
@@ -336,6 +338,8 @@
       <div class="project-small project p-detail">
         <a href="https://life.qujie365.com/index.html">趣街产品主页</a>
         <a href="https://aapw.nbcb.com.cn/ipayCashier/supplement.html">巡检工具 </a>
+        <!-- cordova 代码编译 串口烧录 -->
+        <a href="https://www.sydtech.com.cn/PaymentTerminal/info.aspx?itemid=16&lcid=1"> POS 机</a>
       </div>
     </div>
   </div>
