@@ -54,10 +54,6 @@ a {
   /* text-decoration: none; */
 }
 
-/* 公司名和大学名 */
-.menu-title .left {
-  max-width: calc(100% - 94px);
-}
 
 .menu-title .left span {
   font-weight: 600;

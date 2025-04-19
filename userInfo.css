@@ -13,6 +13,14 @@
   flex: 1;
 }
 
+/* 小小屏幕 */
+@media only screen and (min-width: 200px) {
+  /* 公司和教育 */
+  .works .menu-title .left, .education .menu-title .left {
+    max-width: calc(100% - 94px);
+  }
+}
+
 /* 小屏幕 */
 @media only screen and (max-width: 780px) {
   .user-info {
