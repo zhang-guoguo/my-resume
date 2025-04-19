@@ -56,6 +56,6 @@ ol {
   color: #003366; /* 深蓝色 */
 }
 
-.works-content ,.education-content, .self-discrible-content{
+.works-content, .skill-content, .project-content, .education-content, .self-discrible-content{
   padding:0 15px;
 }

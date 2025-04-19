@@ -88,18 +88,16 @@
     <div class="default-title-wrapper">
       <span class="title">专业技能</span>
     </div>
-    <div class="menu-content">
+    <div class="skill-content menu-content">
       <div class="skill-box p-detail">
         <div class="skill-category"></div>
         <ul>
           <!-- what is webGL !!! -->
           <li>熟悉 JavaScript 高级语言特性，对闭包，原型链，作用域链有深刻理解，多年一线开发经验，具备良好的编程能力</li>
-          <li>熟悉浏览器 DOM, BOM 对象，并掌握 Event Loop 宏任务微任务等浏览器工作原理</li>
+          <!-- 各种终端：浏览器，客户端，以及安卓 ios 原生交互 -->
           <!-- 熟悉跨端开发的各种兼容问题，并能给出适配方案。 -->
            <!--rem，vw 单位和 flex -->
-          <li>熟悉各种客户端，移动端浏览器, 熟练处理各种兼容性问题</li>
-          <!-- 安卓，ios 原生交互-->
-          <li>熟悉 app 内嵌 H5, JSBridge 相关技术栈，并有相关联调经验</li>
+          <li>熟悉浏览器 DOM, BOM 对象，掌握 Event Loop， 宏任务，微任务等浏览器环境的各种机制。熟悉常见移动端（微信，支付宝，云闪付）交互, 熟练处理各种兼容性问题。熟悉三方跨应用间交互, 了解 JSBridge ，并有相关联调经验</li>
            <!-- 了解 Webpack 前端工程化 -->
           <!-- 了解 vite、 gulp 熟练使用各种工程工具 -->
           <li>熟悉 Vite、Webpack 等打包工具的核心概念, 对前端项目模块化有深入了解, 优化打包流程，压缩文件体积</li>
@@ -111,6 +109,15 @@
           2. commonjs 是动态加载的，可以在条件语句中选择引入。esmodule则是前置引入，最典型的应用
           就是 webpack 的 dependancy gragh-->
           <!-- <li>有数据可视化开发经验</li> -->
+
+          <!-- 重点来了！！！学学学！ -->
+          <!-- <li>分布式系统：微服务架构, Kubernetes, Docker, 负载均衡, 服务发现</li> -->
+          <!-- 举例子：
+          使用 Docker 容器化前端应用，结合 Kubernetes 进行部署和管理 -->
+          <!-- 暂时没有后面两个的例子，就先不写了 -->
+          <!-- <li> 数据通信：RESTful API, GraphQL, gRPC</li> -->
+          <!-- 性能优化 -->
+          <!-- <li>CDN, 缓存策略, 延迟优化</li> -->
           <li>熟悉 HTTP、TCP、IP 网络协议，掌握常见网络问题排查工具的使用</li>
           <!-- Whistle、Wireshark  -->
           <!-- 熟悉网络编程，利用 socket 实现 web server -->
@@ -125,6 +132,8 @@
            2.SSM 指 System Security Manager（Java 安全管理器）​控制 Java 应用程序的访问权限。
            场景：通过 SSH 启动 Java 应用时，限制 SSM 对资源的访问（如文件读写、网络连接）
             -->
+                     <!-- 工具 -->
+          <li>熟练掌握 Git 高级命令, 进行主包子包管理、版本控制, 熟练掌握 Jenkins 实现 CI/CD 流程的自动化</li>
         </ul>  
       </div>
       <div class="skill-box p-detail">
@@ -147,40 +156,45 @@
     <div class="default-title-wrapper">
       <span class="title">项目经历</span>
     </div>
-    <div class="project-0 project p-detail">
-      <div class="menu-title">
-        <div class="left"><span>新版本扫码支付</span></div>
-        <div class="right"></div>
-      </div>
-      <div class="qrcode">
-        <span>扫码体验</span>
-        <img src="./img/qrcode_h5.png" alt="" srcset="">
-      </div>
-      <div class="menu-content">
-        <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>方便小微店铺进行小额高频收款，支持多种支付方式。并提供后续对账，查账，退款等一系列服务，满足线上线下多种收银需求。目前商户数30.76万，日活跃商户3万</div>
-        <!-- 央视网曾于2022.12.17报道 -->
-        <div><span>技术栈：</span>vue3.0 + typescript + pinia + less + Vite5 + husky + git submodule</div>
-        <!-- 这里可以聊 less 与 sass 的异同，说明为何选型要选 less ,比对商家端是 sass -->
-        <div>
-          <div><span><span>职责描述：</span></span></div>
-          <ul>
-            <!-- 面试再解释，采用 vue2.7 作为项目开发的原因为，即可以享受到 vue3 的语法结构，又可以兼容更低版本浏览器 -->
-            <li>使用 TypeScript 对 Axios 整个二次封装 （全局错误拦截、常用请求封装...）</li>
-            <li>抽离公共逻辑由 Pinia 进行状态管理, 优化代码逻辑，封装业务模块</li>
-            <li>集成 Eslint、Stylelint 进行代码检查，使用 commitizen 统一提交信息，配置 husky 和 lint-staged 触发提交前代码检查</li>
-            <!-- lint-stage只是钩子管理器，本身并不直接执行代码检查**，而是通过调用 ESLint、Stylelint、Prettier 等工具来完成代码检查、格式化等任务
-            -->
-            <!-- 另一套话术：其中代码扫描使用 ESLint、Stylelint、Prettier 等进行，提交检查由 husky 与 commitlint 进行 -->
-            <li>通过 Git-submodule 管理公共业务组件部分，可跨项目通用，为趣街内部的通用组件。</li>
-            <li>利用 Nginx 重定向，实现老码牌无感迁移和各移动端的授信过程，降低首页加载速度，提高用户体验</li>
-            <li>Lua 脚本进行灰度管理，支持定向灰度，流量灰度和地区灰度</li>
-            <li>配置 CSP 安全策略，防止 XSS 攻击</li>
-            <!-- header头追加 Content-Security-Policy -->
-            <li>对用户行为进行埋点采集上报，方便后期优化</li>
-            <li>利用 wx-open-launch-weapp 提供 H5 跳转小程序功能，引导用户进入小程序领券，增加用户粘性</li>
-          </ul>
+    <div class="project-content">
+      <div class="project-0 project p-detail">
+        <div class="menu-title">
+          <div class="left"><span>新版本扫码支付</span></div>
+          <div class="right"></div>
         </div>
-      </div>
+        <div class="qrcode">
+          <span>扫码体验</span>
+          <img src="./img/qrcode_h5.png" alt="" srcset="">
+        </div>
+        <div class="menu-content">
+          <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>方便小微店铺进行小额高频收款，支持多种支付方式。并提供后续对账，查账，退款等一系列服务，满足线上线下多种收银需求。目前商户数30.76万，日活跃商户3万</div>
+          <!-- 央视网曾于2022.12.17报道 -->
+          <div><span>技术栈：</span>vue3.0 + typescript + pinia + less + Vite5 + husky + git submodule</div>
+          <!-- 这里可以聊 less 与 sass 的异同，说明为何选型要选 less ,比对商家端是 sass -->
+          <div>
+            <div><span><span>职责描述：</span></span></div>
+            <ul>
+              <!-- 面试再解释，采用 vue2.7 作为项目开发的原因为，即可以享受到 vue3 的语法结构，又可以兼容更低版本浏览器 -->
+              <li>使用 TypeScript 对 Axios 整个二次封装 （全局错误拦截、常用请求封装...）</li>
+              <li>抽离公共逻辑由 Pinia 进行状态管理, 优化代码逻辑，封装业务模块</li>
+              <li>集成 Eslint、Stylelint 进行代码检查，使用 commitizen 统一提交信息，配置 husky 和 lint-staged 触发提交前代码检查</li>
+              <!-- lint-stage只是钩子管理器，本身并不直接执行代码检查**，而是通过调用 ESLint、Stylelint、Prettier 等工具来完成代码检查、格式化等任务
+              -->
+              <!-- 另一套话术：其中代码扫描使用 ESLint、Stylelint、Prettier 等进行，提交检查由 husky 与 commitlint 进行 -->
+              <li>通过 Git-submodule 管理公共业务组件部分，可跨项目通用，为趣街内部的通用组件。</li>
+              <li>利用 Nginx 重定向，实现老码牌无感迁移和各移动端的授信过程，降低首页加载速度，提高用户体验</li>
+              <li>Lua 脚本进行灰度管理，支持定向灰度，流量灰度和地区灰度</li>
+              <li>配置 CSP 安全策略，防止 XSS 攻击</li>
+              <!-- header头追加 Content-Security-Policy -->
+              <li>对用户行为进行埋点采集上报，方便后期优化</li>
+              <li>利用 wx-open-launch-weapp 提供 H5 跳转小程序功能，引导用户进入小程序领券，增加用户粘性</li>
+              <!-- 安全
+               requestId
+               身份验证 cookie SERVERID= acw_tc= （未查到来源） -->
+            </ul>
+          </div>
+        </div>
+      </div>  
     </div>
     <!-- <li>使用协商缓存策略，优化页面性能</li> -->
     <!-- 强缓存，协商缓存，请求头部的字段 -->
@@ -201,68 +215,72 @@
     <!-- h5 只能由浏览器自行配置，然后说说 node 或者 webpack 代理配置
       然后引导至 cors。但凡请求格式是json, 就是非简单请求  -->
       <!-- 再可以聊聊 lua 脚本实现灰度的事情 -->
-    <div class="project-2 project p-detail">
-      <div class="menu-title">
-        <div class="left"> <span>智慧商户通 ( Hybrid APP ) </span></div>
-        <div class="right"></div>
-      </div>
-      <div class="menu-content">
-        <div><span><span>项目描述：</span></span>为方便店铺随时查账, 简化商家对账工作而开发。拥有手机语音播报，帮助店家留意收款情况。涵盖顾客分析和周边流量分析两大模块，助力商户提升自身经营效益</div>
-        <div><span>技术栈：</span>uniapp + vue + vue-router + vuex + webpack + sass + promise</div>
-        <div>
-          <div><span><span>职责描述：</span></span></div>
-          <ul>
-            <li>负责首页改版的需求，首页引导页的实现，项目埋点，商户白名单，控制版本灰度升级等</li>
-            <li>公共组件开发和维护，提取相似逻辑，形成模块化功能文件</li>
-            <li>针对项目打包体积过大，主要是图片存放地方进行了优化。包体积缩小 25%</li>
-            <!-- 1. vue-cli 对 assets 文件夹下的文件，利用file-loader 有优化。小图会打包成base64,
-            减少浏览器请求次数。引用时应该采用相对路径（@/./~）
-            2. static 文件夹直接进行 copy，引用时采用绝对路径(\//public)。
-            如果也使用了相对路径引用，会导致打包时loader处理一次, 且 copy时 也复制一份 -->
-            <!-- 性能优化点：引导进行源码层面的分析 -->
-            <!-- 冻结数据或者不在data中声明
-             自定义事件，组件销毁时要清除，避免内存泄露 -->
-            <li>扩展依赖包 uni-app-fox 网络请求部分，个性化依赖包功能</li>
-            <li>通过壳子注入 jsbridge 文件，实现调取通讯录，打开照相机，语音播报，证件信息识别等原生功能</li>
-            <!-- 可以结合下面 URL Scheme 聊 h5 与原生的通信 
-             JSBridge 的原理通常并不依赖传统网络协议（如 HTTP、WebSocket 等）
-             而是基于浏览器或 WebView 提供的接口和机制来实现
-             并未依赖任何网络协议，而是依赖消息事件机制
-             技术本质上属于应用内的 API 设计，不涉及实际的网络传输或协议-->
-             <!-- 不是鉴权 -->
-            <li>基于 Promise 封装统一的 request 对象, 处理请求和响应，并作相应拦截。对请求信息进行加密，解密，验签处理</li>
-            <!-- 鉴权这里还没想好咋说 -->
-            <!-- 引申到加解密，以及网络安全 -->
-            <!-- 面向对象编程，以及常见请求库的功能 -->
-            <!-- 最好能说说 uniapp 和 vue 的关系，聊聊源码 -->
-            <li>移动端调试方法的预研和组内分享, 例如移动端抓包和页面调试工具</li>
-            <!-- 扩展说最开始只能去后端那边查日志，后来找到合适的方法，前端可以自主进行 -->
-          </ul>
+    <div class="project-content">
+      <div class="project-2 project p-detail">
+        <div class="menu-title">
+          <div class="left"> <span>智慧商户通 ( Hybrid APP ) </span></div>
+          <div class="right"></div>
         </div>
-      </div>
+        <div class="menu-content">
+          <div><span><span>项目描述：</span></span>为方便店铺随时查账, 简化商家对账工作而开发。拥有手机语音播报，帮助店家留意收款情况。涵盖顾客分析和周边流量分析两大模块，助力商户提升自身经营效益</div>
+          <div><span>技术栈：</span>uniapp + vue + vue-router + vuex + webpack + sass + promise</div>
+          <div>
+            <div><span><span>职责描述：</span></span></div>
+            <ul>
+              <li>负责首页改版的需求，首页引导页的实现，项目埋点，商户白名单，控制版本灰度升级等</li>
+              <li>公共组件开发和维护，提取相似逻辑，形成模块化功能文件</li>
+              <li>针对项目打包体积过大，主要是图片存放地方进行了优化。包体积缩小 25%</li>
+              <!-- 1. vue-cli 对 assets 文件夹下的文件，利用file-loader 有优化。小图会打包成base64,
+              减少浏览器请求次数。引用时应该采用相对路径（@/./~）
+              2. static 文件夹直接进行 copy，引用时采用绝对路径(\//public)。
+              如果也使用了相对路径引用，会导致打包时loader处理一次, 且 copy时 也复制一份 -->
+              <!-- 性能优化点：引导进行源码层面的分析 -->
+              <!-- 冻结数据或者不在data中声明
+               自定义事件，组件销毁时要清除，避免内存泄露 -->
+              <li>扩展依赖包 uni-app-fox 网络请求部分，个性化依赖包功能</li>
+              <li>通过壳子注入 jsbridge 文件，实现调取通讯录，打开照相机，语音播报，证件信息识别等原生功能</li>
+              <!-- 可以结合下面 URL Scheme 聊 h5 与原生的通信 
+               JSBridge 的原理通常并不依赖传统网络协议（如 HTTP、WebSocket 等）
+               而是基于浏览器或 WebView 提供的接口和机制来实现
+               并未依赖任何网络协议，而是依赖消息事件机制
+               技术本质上属于应用内的 API 设计，不涉及实际的网络传输或协议-->
+               <!-- 不是鉴权 -->
+              <li>基于 Promise 封装统一的 request 对象, 处理请求和响应，并作相应拦截。对请求信息进行加密，解密，验签处理</li>
+              <!-- 鉴权这里还没想好咋说 -->
+              <!-- 引申到加解密，以及网络安全 -->
+              <!-- 面向对象编程，以及常见请求库的功能 -->
+              <!-- 最好能说说 uniapp 和 vue 的关系，聊聊源码 -->
+              <li>移动端调试方法的预研和组内分享, 例如移动端抓包和页面调试工具</li>
+              <!-- 扩展说最开始只能去后端那边查日志，后来找到合适的方法，前端可以自主进行 -->
+            </ul>
+          </div>
+        </div>
+      </div>  
     </div>
-    <div class="project-3 project p-detail">
-      <div class="menu-title">
-        <div class="left"> <span>智慧商户通收银台 ( 微信，支付小程序 ) </span></div>
-        <div class="right"></div>
-      </div>
-      <div class="menu-content">
-        <div><span>项目描述：</span>
-          支付小程序，通过 uniapp 实现的支持多端上线的小程序代码
-          <!-- 扫码支付业务的小程序版本，通过不同的打包脚本，实现一套代码发布到多个平台。代码结构使用消息通讯机制，将支付结果的分发至各处。本地信息加密存储，保护用户隐私。项目建立了完整的缺陷收集和埋点数据收集体系 -->
+    <div class="project-content">
+      <div class="project-3 project p-detail">
+        <div class="menu-title">
+          <div class="left"> <span>智慧商户通收银台 ( 微信，支付小程序 ) </span></div>
+          <div class="right"></div>
         </div>
-        <div><span>技术栈：</span> vue3 + uniapp + pnpm + typescript + vite-plugin-uni + git submodule </div>
-        <div>
-          <div><span><span>职责描述：</span></span></div>
-          <ul>
-            <!-- pnpm 多个项目共享核心依赖 -->
-             <li>配合三方具体应用场景，提供相应支付能力，并在微信官方风控收紧时，及时提供新方案</li>
-             <li>配置微信后台订阅信息模板，并开发联调微信消息订阅模块</li>
-            <li>负责小程序灰度发布体系的搭建，确保新功能安全稳定上线</li>
-            <li>输出对接三方技术文档，并持续维护文档更新</li>
-          </ul>
+        <div class="menu-content">
+          <div><span>项目描述：</span>
+            支付小程序，通过 uniapp 实现的支持多端上线的小程序代码
+            <!-- 扫码支付业务的小程序版本，通过不同的打包脚本，实现一套代码发布到多个平台。代码结构使用消息通讯机制，将支付结果的分发至各处。本地信息加密存储，保护用户隐私。项目建立了完整的缺陷收集和埋点数据收集体系 -->
+          </div>
+          <div><span>技术栈：</span> vue3 + uniapp + pnpm + typescript + vite-plugin-uni + git submodule </div>
+          <div>
+            <div><span><span>职责描述：</span></span></div>
+            <ul>
+              <!-- pnpm 多个项目共享核心依赖 -->
+               <li>配合三方具体应用场景，提供相应支付能力，并在微信官方风控收紧时，及时提供新方案</li>
+               <li>配置微信后台订阅信息模板，并开发联调微信消息订阅模块</li>
+              <li>负责小程序灰度发布体系的搭建，确保新功能安全稳定上线</li>
+              <li>输出对接三方技术文档，并持续维护文档更新</li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </div>  
     </div>
     <!-- <div class="project-3 project">
       <div class="menu-title">
@@ -285,36 +303,40 @@
         </div>
       </div>
     </div> -->
-    <div class="project-4 project p-detail">
-      <div class="menu-title">
-        <div class="left">
-          <span>
-            <a href=" https://aapw.nbcb.com.cn/ipayPcView/#/login">宁波银行特约商户服务平台</a>
-          </span>
+    <div class="project-content">
+      <div class="project-4 project p-detail">
+        <div class="menu-title">
+          <div class="left">
+            <span>
+              <a href=" https://aapw.nbcb.com.cn/ipayPcView/#/login">宁波银行特约商户服务平台</a>
+            </span>
+          </div>
+          <div class="right"></div>
         </div>
-        <div class="right"></div>
-      </div>
-      <div class="menu-content">
-        <div><span>项目描述：</span>提供 pc 端的商户经验状况查询入口，助力商户及时调整经营策略，提升营业额</div>
-        <!-- https://aapw.nbcb.com.cn/ipayPcView/#/login -->
-        <div><span>技术栈：</span>echarts + axios + element-ui + vue全家桶 + webpack + sass</div>
-        <div>
-          <div><span>职责描述：</span></div>
-          <ul>
-            <li>利用饼图，树状图，折线图等方式，实现数据可视化</li>
-            <li>响应式布局，适配各种尺寸的电脑屏幕</li>
-            <li>路由懒加载，提升首页渲染速度</li>
-            <li>引入 vuedraggable 依赖，实现可拖拽效果，改变列表顺序，用户可自行设置优先级</li>
-            <!-- 这里引导进行 webpack 打包原理，chunk-vendor.js，index.js，以及各种路由js 文件 -->
-            <!-- 部署优化，开启 gzip -->
-          </ul>
+        <div class="menu-content">
+          <div><span>项目描述：</span>提供 pc 端的商户经验状况查询入口，助力商户及时调整经营策略，提升营业额</div>
+          <!-- https://aapw.nbcb.com.cn/ipayPcView/#/login -->
+          <div><span>技术栈：</span>echarts + axios + element-ui + vue全家桶 + webpack + sass</div>
+          <div>
+            <div><span>职责描述：</span></div>
+            <ul>
+              <li>利用饼图，树状图，折线图等方式，实现数据可视化</li>
+              <li>响应式布局，适配各种尺寸的电脑屏幕</li>
+              <li>路由懒加载，提升首页渲染速度</li>
+              <li>引入 vuedraggable 依赖，实现可拖拽效果，改变列表顺序，用户可自行设置优先级</li>
+              <!-- 这里引导进行 webpack 打包原理，chunk-vendor.js，index.js，以及各种路由js 文件 -->
+              <!-- 部署优化，开启 gzip -->
+            </ul>
+          </div>
         </div>
+      </div>  
+    </div>    
+    <div class="project-content">
+      <!-- 小产品直接放链接，好歹是上线的 -->
+      <div class="project-small project p-detail">
+        <a href="https://life.qujie365.com/index.html">趣街产品主页</a>
+        <a href="https://aapw.nbcb.com.cn/ipayCashier/supplement.html">巡检工具 </a>
       </div>
-    </div>
-    <!-- 小产品直接放链接，好歹是上线的 -->
-    <div class="project-small project p-detail">
-      <a href="https://life.qujie365.com/index.html">趣街产品主页</a>
-      <a href="https://aapw.nbcb.com.cn/ipayCashier/supplement.html">巡检工具 </a>
     </div>
   </div>
   <!--巡检系统：多页面应用，vant 组件库-->
