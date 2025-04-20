@@ -167,9 +167,13 @@
           <img src="./img/qrcode_h5.png" alt="" srcset="">
         </div>
         <div class="menu-content">
-          <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>方便小微店铺进行小额高频收款，支持多种支付方式。并提供后续对账，查账，退款等一系列服务，满足线上线下多种收银需求。目前商户数30.76万，日活跃商户3万</div>
-          <!-- 央视网曾于2022.12.17报道 -->
-          <div style="width: calc(100% - 65px)"><span>技术栈：</span>vue3.0 + typescript + pinia + less + Vite5 + husky + git submodule</div>
+          <!-- 会话保持​优点​​：
+          确保同一客户端的请求始终由同一台服务器处理。
+          避免会话数据在不同服务器之间共享的复杂性 -->
+          <!-- 负载均衡器优化：
+          ​​优先分发到特定服务器​​：如果客户端已经与某台服务器建立了连接，负载均衡器可以优先将请求分发到该服务器，减少切换服务器的开销。
+          ​​避免频繁切换服务器​​：通过 SERVERID，负载均衡器可以避免频繁将请求分发到不同的服务器，从而提高性能。 -->
+          <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>聚合支付业务，前端使用 Vue3 + Pinia + Typescript 开发，封装组件库作为内部通用库，利用 Git submodule 进行管理。后端采用分布式系统，入口服务器采用 OpenResty，通过 Lua 脚本实现流量分发，实现各应用灰度发布</div>
           <!-- 这里可以聊 less 与 sass 的异同，说明为何选型要选 less ,比对商家端是 sass -->
           <div>
             <div><span><span>职责描述：</span></span></div>
@@ -182,11 +186,10 @@
               <!-- lint-stage只是钩子管理器，本身并不直接执行代码检查**，而是通过调用 ESLint、Stylelint、Prettier 等工具来完成代码检查、格式化等任务
               -->
               <!-- 另一套话术：其中代码扫描使用 ESLint、Stylelint、Prettier 等进行，提交检查由 husky 与 commitlint 进行 -->
-              <li>通过 Git-submodule 管理公共业务组件部分，可跨项目通用，为趣街内部的通用组件。</li>
               <li>利用 Nginx 重定向，实现老码牌无感迁移和各移动端的授信过程，降低首页加载速度，提高用户体验</li>
-              <li>Lua 脚本进行灰度管理，支持定向灰度，流量灰度和地区灰度</li>
-              <li>配置 CSP 安全策略，防止 XSS 攻击</li>
-              <!-- header头追加 Content-Security-Policy -->
+              <!-- CSP CORS -->
+               <!-- 商户 logo 存放在阿里云 OSS 存储，需要配置阿里云 -->
+              <li>更新 CSP 安全配置，允许必要的业务访问</li>
               <li>对用户行为进行埋点采集上报，方便后期优化</li>
               <li>利用 wx-open-launch-weapp 提供 H5 跳转小程序功能，引导用户进入小程序领券，增加用户粘性</li>
               <!-- 安全
@@ -266,16 +269,15 @@
         </div>
         <div class="menu-content">
           <div><span>项目描述：</span>
-            支付小程序，通过 uniapp 实现的支持多端上线的小程序代码
+            支付小程序通过 uniapp 实现多端上线的小程序代码，利用 pnpm 进行依赖包管理，Vue3 + Typescript 进行页面开发, Git submodule 进行小程序的灰度管理
             <!-- 扫码支付业务的小程序版本，通过不同的打包脚本，实现一套代码发布到多个平台。代码结构使用消息通讯机制，将支付结果的分发至各处。本地信息加密存储，保护用户隐私。项目建立了完整的缺陷收集和埋点数据收集体系 -->
           </div>
-          <div><span>技术栈：</span> vue3 + uniapp + pnpm + typescript + vite-plugin-uni + git submodule </div>
           <div>
             <div><span><span>职责描述：</span></span></div>
             <ul>
               <!-- pnpm 多个项目共享核心依赖 -->
                <li>使用 UniApp 实现一套代码同时编译为微信和支付宝小程序，减少开发和维护成本</li>
-               <li>配合三方具体应用场景，提供相应支付能力，并在微信官方风控收紧时，及时提供新方案</li>
+               <li>配合三方具体应用场景，提供相应支付能力，并在微信官方风控收紧时，及时提供新方案。目前支持原生 App, 微信小程序两种方式，拉起小程序支付 </li>
                <li>配置微信后台订阅信息模板，并开发联调微信消息订阅模块</li>
               <li>负责小程序灰度发布体系的搭建，确保新功能安全稳定上线</li>
               <li>输出对接三方技术文档，并持续维护文档更新</li>
