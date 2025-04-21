@@ -159,7 +159,7 @@
     <div class="project-content">
       <div class="project-0 project p-detail">
         <div class="menu-title">
-          <div class="left"><span>新版本扫码支付</span></div>
+          <div class="left"><span>扫码支付</span></div>
           <div class="right"></div>
         </div>
         <div class="qrcode">
@@ -173,28 +173,39 @@
           <!-- 负载均衡器优化：
           ​​优先分发到特定服务器​​：如果客户端已经与某台服务器建立了连接，负载均衡器可以优先将请求分发到该服务器，减少切换服务器的开销。
           ​​避免频繁切换服务器​​：通过 SERVERID，负载均衡器可以避免频繁将请求分发到不同的服务器，从而提高性能。 -->
-          <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>聚合支付业务，前端使用 Vue3 + Pinia + Typescript 开发，封装组件库作为内部通用库，利用 Git submodule 进行管理。后端采用分布式系统，入口服务器采用 OpenResty，通过 Lua 脚本实现流量分发，实现各应用灰度发布</div>
+          <div style="width: calc(100% - 65px)"><span><span>项目描述：</span></span>聚合支付业务，前端使用 Vue3 + Pinia + Typescript + Vite5 开发，封装组件库作为内部通用库。后端采用分布式系统，入口服务器采用 OpenResty，通过 Lua 脚本实现流量分发，实现各应用灰度发布</div>
           <!-- 这里可以聊 less 与 sass 的异同，说明为何选型要选 less ,比对商家端是 sass -->
           <div>
-            <div><span><span>职责描述：</span></span></div>
+            <div><span><span>项目难点：</span></span></div>
             <ul>
               <!-- 面试再解释，采用 vue2.7 作为项目开发的原因为，即可以享受到 vue3 的语法结构，又可以兼容更低版本浏览器 -->
-              <li>使用 Vue 3 和 Pinia 构建高性能 H5 页面，确保在多浏览器环境下的兼容性</li>
-              <li>集成微信和支付宝的 JS-SDK，实现分享、支付等原生功能，提升用户体验</li>
-              <li>进行性能优化，包括代码分割、懒加载和资源压缩，确保页面快速加载。首页引入骨架屏，​​提升感知性能</li>
-              <li>集成 Eslint、Stylelint 进行代码检查，使用 commitizen 统一提交信息，配置 husky 和 lint-staged 触发提交前代码检查</li>
+              <li>使用多支付渠道整合的兼容性处理</li>
+              <li>复杂的用户授权和支付流程管理，网络安全</li>
+              <li>敏感数据的加密传输和存储,防范 XSS、CSRF 等网络攻击</li>
+              <li>大型项目的模块化管理和性能优化</li>
+              <li>应用的灰度发布机制</li>
+              <!-- <li>集成 Eslint、Stylelint 进行代码检查，使用 commitizen 统一提交信息，配置 husky 和 lint-staged 触发提交前代码检查</li> -->
               <!-- lint-stage只是钩子管理器，本身并不直接执行代码检查**，而是通过调用 ESLint、Stylelint、Prettier 等工具来完成代码检查、格式化等任务
               -->
               <!-- 另一套话术：其中代码扫描使用 ESLint、Stylelint、Prettier 等进行，提交检查由 husky 与 commitlint 进行 -->
-              <li>利用 Nginx 重定向，实现老码牌无感迁移和各移动端的授信过程，降低首页加载速度，提高用户体验</li>
+              <!-- <li>利用 Nginx 重定向，实现老码牌无感迁移和各移动端的授信过程，降低首页加载速度，提高用户体验</li> -->
               <!-- CSP CORS -->
                <!-- 商户 logo 存放在阿里云 OSS 存储，需要配置阿里云 -->
-              <li>更新 CSP 安全配置，允许必要的业务访问</li>
+              <!-- <li>更新 CSP 安全配置，允许必要的业务访问</li>
               <li>对用户行为进行埋点采集上报，方便后期优化</li>
-              <li>利用 wx-open-launch-weapp 提供 H5 跳转小程序功能，引导用户进入小程序领券，增加用户粘性</li>
+              <li>利用 wx-open-launch-weapp 提供 H5 跳转小程序功能，引导用户进入小程序领券，增加用户粘性</li> -->
               <!-- 安全
                requestId
                身份验证 cookie SERVERID= acw_tc= （未查到来源） -->
+            </ul>
+          </div>
+          <div>
+            <div><span>个人贡献及项目成果</span></div>
+            <ul>
+              <li>统一的支付渠道参数管理和错误处理机制,，提高系统稳定性</li>
+              <li>模块化的授权流程设计和状态管理</li>
+              <li>基于 Git Submodule 的组件库管理方案, 代码复用率提升 30%</li>
+              <li>构建速度提升 50%,首屏加载时间优化到 2s 以内</li>
             </ul>
           </div>
         </div>
