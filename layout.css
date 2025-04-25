@@ -8,6 +8,7 @@ html, body{
 }
 
 body {
+  position: relative;
   font-size: 13px;
   line-height: 20px;
   color: #333; /* 文字颜色 */

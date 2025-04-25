@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="project.css">
   <link rel="stylesheet" href="userInfo.css">
   <link rel="stylesheet" href="skill.css">
+  <link rel="stylesheet" href="down.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <style>
      /* 整体以白色为主会清爽 */
   </style>
@@ -437,6 +441,10 @@
       </ul>
     </div>
   </div>
+  <!-- 下载 -->
+  <footer class="download">
+    <button><i class="fa-solid fa-download"></i>PDF</button>
+  </footer>
 </body>
 
 <script>
@@ -455,5 +463,37 @@
   const work = document.getElementsByClassName('work-1')[0]
   const right = work.getElementsByClassName('right')[0]
   right.textContent = `2022.1-${ new Date().getFullYear() + '.' + (new Date().getMonth() + 1) }`;
+
+  // 下载简历
+  const download = document.getElementsByClassName("download")[0]
+  download.addEventListener("click", async () => {
+    const { jsPDF } = window.jspdf; 
+
+    // 1. 使用 html2canvas 截取 HTML 内容
+    const element = document.getElementsByTagName("body")[0];
+    const canvas = await html2canvas(element, {
+      scale: 2, // 提高清晰度
+      useCORS: true, // 允许跨域图片
+    });
+
+    // 2. 将 canvas 转换为图片
+    const imgData = canvas.toDataURL("image/png");
+
+    // 3. 创建 PDF 并添加图片
+    const pdf = new jsPDF({
+      orientation: "portrait", // 纵向
+      unit: "mm", // 单位（mm, cm, in, px）
+      format: "a4", // A4 纸张大小
+    });
+
+    const imgProps = pdf.getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+
+    // 4. 下载 PDF
+    pdf.save("my-document.pdf");
+  })
 </script>
 </html>
