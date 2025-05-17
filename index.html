@@ -204,9 +204,9 @@
             </ul>
           </div>
           <div>
-            <div><span>个人贡献及项目成果</span></div>
+            <div><span>个人贡献及项目成果:</span></div>
             <ul>
-              <li>统一的支付渠道参数管理和错误处理机制,，提高系统稳定性</li>
+              <li>统一的支付渠道参数管理和错误处理机制，提高系统稳定性</li>
               <li>模块化的授权流程设计和状态管理</li>
               <li>基于 Git Submodule 的组件库管理方案, 代码复用率提升 30%</li>
               <li>构建速度提升 50%,首屏加载时间优化到 2s 以内</li>
@@ -244,35 +244,49 @@
           <div><span><span>项目描述：</span></span>为方便店铺随时查账, 简化商家对账工作而开发。拥有手机语音播报，帮助店家留意收款情况。涵盖顾客分析和周边流量分析两大模块，助力商户提升自身经营效益</div>
           <div><span>技术栈：</span>uniapp + vue + vue-router + vuex + webpack + sass + promise</div>
           <div>
-            <div><span><span>职责描述：</span></span></div>
+             <div><span><span>项目难点：</span></span></div>
+             <ul>
+              <!-- html5Plus 增强引擎 -->
+              <li>参与 uni-app 深度定制开发，扩展 app-fox 平台实现混合渲染方案</li>
+             </ul>
+          </div>
+          <div>
+            <div><span>个人贡献及项目成果:</span></div>
             <ul>
-              <li>设计并实现前端包的动态升级机制，通过壳子管理前端资源的更新和版本控制。并引入商户白名单，指定对象进行版本升级</li>
-              <li>公共组件开发和维护，提取相似逻辑，形成模块化功能文件</li>
-              <li>针对项目打包体积过大，主要是图片存放地方进行了优化。包体积缩小 25%</li>
-              <!-- 1. vue-cli 对 assets 文件夹下的文件，利用file-loader 有优化。小图会打包成base64,
+              <li>深入理解 HTML5+ runtime 内存管理机制，针对 iOS 平台实现 Native 对象全生命周期管理，通过 deleteObject 调用保障内存安全，使权限模块内存占用下降15%</li>
+              <li>支持 8+ 种敏感权限控制（包含推送、定位等高风险权限），采用 Promise 异步处理模型，确保流程可控，降低使用复杂度 40%"</li>
+             </ul>
+          </div>
+                        <!-- 1. vue-cli 对 assets 文件夹下的文件，利用file-loader 有优化。小图会打包成base64,
               减少浏览器请求次数。引用时应该采用相对路径（@/./~）
               2. static 文件夹直接进行 copy，引用时采用绝对路径(\//public)。
               如果也使用了相对路径引用，会导致打包时loader处理一次, 且 copy时 也复制一份 -->
               <!-- 性能优化点：引导进行源码层面的分析 -->
               <!-- 冻结数据或者不在data中声明
                自定义事件，组件销毁时要清除，避免内存泄露 -->
-              <li>扩展依赖包 uni-app-fox 网络请求部分，个性化依赖包功能</li>
-              <li>壳子通过​​ WebView 组件注入 JavaScript Bridge，提供页面调取通讯录，打开照相机，语音播报，证件信息识别等设备原生功能</li>
               <!-- 可以结合下面 URL Scheme 聊 h5 与原生的通信 
                JSBridge 的原理通常并不依赖传统网络协议（如 HTTP、WebSocket 等）
                而是基于浏览器或 WebView 提供的接口和机制来实现
                并未依赖任何网络协议，而是依赖消息事件机制
                技术本质上属于应用内的 API 设计，不涉及实际的网络传输或协议-->
                <!-- 不是鉴权 -->
-              <li>基于 Promise 封装统一的 request 对象, 处理请求和响应，并作相应拦截。对请求信息进行加密，解密，验签处理</li>
               <!-- 鉴权这里还没想好咋说 -->
               <!-- 引申到加解密，以及网络安全 -->
               <!-- 面向对象编程，以及常见请求库的功能 -->
               <!-- 最好能说说 uniapp 和 vue 的关系，聊聊源码 -->
-              <li>预研并在组内分享移动端调试方法和抓包工具, 提高整组的工作效率</li>
               <!-- 扩展说最开始只能去后端那边查日志，后来找到合适的方法，前端可以自主进行 -->
+          <!-- <div>
+            <div><span><span>职责描述：</span></span></div>
+            <ul>
+              <li>设计并实现前端包的动态升级机制，通过壳子管理前端资源的更新和版本控制。并引入商户白名单，指定对象进行版本升级</li>
+              <li>公共组件开发和维护，提取相似逻辑，形成模块化功能文件</li>
+              <li>针对项目打包体积过大，主要是图片存放地方进行了优化。包体积缩小 25%</li>
+              <li>扩展依赖包 uni-app-fox 网络请求部分，个性化依赖包功能</li>
+              <li>壳子通过​​ WebView 组件注入 JavaScript Bridge，提供页面调取通讯录，打开照相机，语音播报，证件信息识别等设备原生功能</li>
+              <li>基于 Promise 封装统一的 request 对象, 处理请求和响应，并作相应拦截。对请求信息进行加密，解密，验签处理</li>
+              <li>预研并在组内分享移动端调试方法和抓包工具, 提高整组的工作效率</li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>  
     </div>
@@ -300,7 +314,7 @@
           <div>
             <div><span><span>个人贡献及项目成果：</span></span></div>
             <ul>
-               <li> </li>
+               <li>负责三方多场景对接，并形成相关文档 </li>
                <li>模块化版本控制，自动化构建脚本，环境配置分离</li>
                <!-- 暂时还没有 -->
                <li>数据预加载和缓存管理，图片资源优化</li>
@@ -341,6 +355,26 @@
       </div>
     </div> -->
     <div class="project-content">
+      <div class="project-3 project p-detail">
+        <div class="menu-title">
+          <div class="left"> <span>AI 生成代码助手 </span></div>
+          <div class="right"></div>
+        </div>
+        <div class="menu-content">
+          <div><span>项目描述：</span>
+            nodejs + nextjs + react + typescript 开发的一个 AI 生成代码助手，支持多种语言的代码生成和执行
+          </div>
+          <div>
+            <div><span><span></span></span></div>
+            <ul>
+               <li>具有 AI Client，利用 ChatGPT API 做为智能来源</li>
+               <li>数据预加载和缓存管理，图片资源优化</li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="project-content">
       <div class="project-4 project p-detail">
         <div class="menu-title">
           <div class="left">
@@ -353,7 +387,7 @@
         <div class="menu-content">
           <div><span>项目描述：</span>提供 pc 端的商户经验状况查询入口，助力商户及时调整经营策略，提升营业额</div>
           <!-- https://aapw.nbcb.com.cn/ipayPcView/#/login -->
-          <div><span>技术栈：</span>echarts + axios + element-ui + vue全家桶 + webpack + sass</div>
+          <div><span>技术栈：</span>Echarts + Axios + Element-ui + Vue全家桶 + Webpack + Sass</div>
           <div>
             <div><span>职责描述：</span></div>
             <ul>
@@ -375,6 +409,7 @@
         <a href="https://aapw.nbcb.com.cn/ipayCashier/supplement.html">巡检工具</a>
         <!-- cordova 代码编译 串口烧录 -->
         <a href="https://www.sydtech.com.cn/PaymentTerminal/info.aspx?itemid=16&lcid=1">POS 机</a>
+        <a href="https://lifetest.qujie365.com/smpay/unionpay/static/doc/api/">[文档]</a>
       </div>
     </div>
   </div>
