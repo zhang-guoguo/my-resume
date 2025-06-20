@@ -509,6 +509,9 @@
   const right = work.getElementsByClassName('right')[0]
   right.textContent = `2022.1-${ new Date().getFullYear() + '.' + (new Date().getMonth() + 1) }`;
 
+  if (window.location.href.indexOf("127.0.0.1") > -1) {
+    document.getElementsByClassName("download")[0].style.display = "none";
+  }
   document.getElementsByClassName("download")[0].children[0].href = `https://raw.githubusercontent.com/zhang-guoguo/my-resume/refs/heads/main/${title.textContent}.pdf`
 </script>
 </html>
