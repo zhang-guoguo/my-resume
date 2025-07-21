@@ -519,6 +519,6 @@
   if (window.location.href.indexOf("127.0.0.1") > -1) {
     document.getElementsByClassName("download")[0].style.display = "none";
   }
-  document.getElementsByClassName("download")[0].children[0].href = `https://raw.githubusercontent.com/zhang-guoguo/my-resume/refs/heads/main/${title.textContent}.pdf`
+  document.getElementsByClassName("download")[0].children[0].href = `https://zgggroup.coding.net/p/test/d/my-resume/git/raw/main/${encodeURIComponent(title.textContent)}.pdf?download=true`
 </script>
 </html>
