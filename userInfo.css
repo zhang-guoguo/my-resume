@@ -38,7 +38,9 @@
 @media only screen and (min-width: 780px) {
   .user-info section {
     justify-content: center;
+    padding-left: 15px;
   }
+
   .profile-row:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -55,9 +57,6 @@ body{
   /* 右边加起来的再加点 */
   height: 98px;
   aspect-ratio: 0.8;
-}
-.user-info section{
-  padding-left: 15px;
 }
 
 
